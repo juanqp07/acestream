@@ -3,8 +3,12 @@ name: Actualizar M3U (acestream->http)
 
 on:
 schedule:
-- cron: '*/15 * * * *' # cada 15 minutos
-workflow_dispatch: {} # permite ejecutarlo manualmente también
+- cron: '*/15 * * * *'
+workflow_dispatch:
+
+
+permissions:
+contents: write
 
 
 jobs:
@@ -12,11 +16,16 @@ update:
 runs-on: ubuntu-latest
 
 
+env:
+HOST: 127.0.0.1
+PORT: 6878
+SOURCE_URL: https://raw.githubusercontent.com/Icastresana/lista1/refs/heads/main/eventos.m3u
+
+
 steps:
 - name: Checkout repository
 uses: actions/checkout@v4
 with:
-token: ${{ secrets.GITHUB_TOKEN }}
 fetch-depth: 0
 
 
@@ -26,10 +35,11 @@ with:
 python-version: '3.10'
 
 
+- name: Descargar M3U origen
+run: |
+curl -fsSL "$SOURCE_URL" -o playlist.m3u
+
+
 - name: Ejecutar script para actualizar M3U
 run: |
-python3 update_m3u_acestream.py --input playlist.m3u
-
-
-# Nota: actions/checkout con el token por defecto permite push. Si necesitas
-# permissions adicionales, ajusta los permisos del workflow en Settings.
+python3 update_m3u_acestream.py --url "$SOURCE_URL" --output playlist.m3u --host "$HOST" --port $PORT
