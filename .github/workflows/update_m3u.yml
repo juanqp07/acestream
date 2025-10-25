@@ -1,0 +1,35 @@
+name: Actualizar M3U (acestream->http)
+
+
+on:
+schedule:
+- cron: '*/15 * * * *' # cada 15 minutos
+workflow_dispatch: {} # permite ejecutarlo manualmente también
+
+
+jobs:
+update:
+runs-on: ubuntu-latest
+
+
+steps:
+- name: Checkout repository
+uses: actions/checkout@v4
+with:
+token: ${{ secrets.GITHUB_TOKEN }}
+fetch-depth: 0
+
+
+- name: Setup Python
+uses: actions/setup-python@v4
+with:
+python-version: '3.10'
+
+
+- name: Ejecutar script para actualizar M3U
+run: |
+python3 update_m3u_acestream.py --input playlist.m3u
+
+
+# Nota: actions/checkout con el token por defecto permite push. Si necesitas
+# permissions adicionales, ajusta los permisos del workflow en Settings.
