@@ -6,7 +6,7 @@ Descarga (opcional) un M3U desde una URL pública o procesa un archivo local,
 reemplaza enlaces tipo:
   acestream://2773b39926d15dd3d9495d94c4050604792d7031
 por:
-  http://<host>:<port>/2773b39926d15dd3d9495d94c4050604792d7031
+  http://<host>:<port>/ace/getstream?id=2773b39926d15dd3d9495d94c4050604792d7031
 
 Uso en Actions (ejemplo):
   python3 update_m3u_acestream.py --url "https://raw.githubusercontent.com/Icastresana/lista1/refs/heads/main/eventos.m3u" --output playlist.m3u
@@ -28,26 +28,26 @@ import subprocess
 import sys
 import urllib.request
 
+# patrón para hashes típicos de acestream (40 hex)
 PATTERN = re.compile(r"acestream://([0-9A-Fa-f]{40})")
-
 
 def now_ts():
     return datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
 
-
 def replace_acestream(text: str, host: str, port: int) -> str:
-    # Usamos una función para evitar problemas con backreferences en literales
+    """
+    Reemplaza cada acestream://<hash> por:
+      http://{host}:{port}/ace/getstream?id=<hash>
+    """
     def repl(m):
-        return f"http://{host}:{port}/{m.group(1)}"
+        return f"http://{host}:{port}/ace/getstream?id={m.group(1)}"
     return PATTERN.sub(repl, text)
-
 
 def backup_file(path: Path) -> Path:
     ts = now_ts()
     dest = path.with_name(path.name + f".bak.{ts}")
     shutil.copy2(path, dest)
     return dest
-
 
 def download_url(url: str) -> str:
     try:
@@ -56,7 +56,6 @@ def download_url(url: str) -> str:
             return r.read().decode(charset, errors="replace")
     except Exception as e:
         raise RuntimeError(f"Error descargando URL {url}: {e}")
-
 
 def git_commit_and_push(path: Path, message: str) -> None:
     # Config user (en Actions puede no estar configurado)
@@ -76,7 +75,6 @@ def git_commit_and_push(path: Path, message: str) -> None:
 
     subprocess.run(["git", "commit", "-m", message], check=True)
     subprocess.run(["git", "push"], check=True)
-
 
 def main():
     p = argparse.ArgumentParser()
@@ -124,7 +122,6 @@ def main():
         except subprocess.CalledProcessError as e:
             print("Error al hacer commit/push:", e)
             sys.exit(3)
-
 
 if __name__ == "__main__":
     main()
