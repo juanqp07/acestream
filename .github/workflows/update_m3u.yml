@@ -10,7 +10,7 @@ permissions:
 
 env:
   HOST: '127.0.0.1'
-  PORT: '6878'
+  PORT: '8080'
   SOURCE_URL: 'https://raw.githubusercontent.com/Icastresana/lista1/refs/heads/main/eventos.m3u'
 
 jobs:
