@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 env:
-  HOST: '127.0.0.1'
+  HOST: '192.168.1.143'
   PORT: '8080'
   SOURCE_URL: "https://aitronz-combinada.vercel.app/aitronz_ext_combined.m3u"
 
