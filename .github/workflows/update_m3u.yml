@@ -9,52 +9,34 @@ permissions:
   contents: write
 
 env:
-  HOST: "192.168.1.143"
-  PORT: "8080"
+  HOST: '192.168.1.143'
+  PORT: '8080'
   SOURCE_URL: "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u"
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    env:
-      HOST: ${{ env.HOST }}
-      PORT: ${{ env.PORT }}
-      SOURCE_URL: ${{ env.SOURCE_URL }}
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
+      
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-
-      - name: Comprobar accesibilidad de la URL (curl -I)
-        run: |
-          echo "Probando acceso a $SOURCE_URL"
-          curl -I --max-time 30 "$SOURCE_URL" || true
-          echo "Intento de descarga corto (HEAD) completado"
-      
-      - name: Descargar prueba completa (curl -f)
-        run: |
-          echo "Intentando descargar la lista (guardando prueba en test.m3u)"
-          curl -f --retry 3 --retry-delay 5 --max-time 120 -o test.m3u "$SOURCE_URL" && ls -l test.m3u || echo "Descarga fallida"
       
       - name: Ejecutar script para actualizar M3U
+        env:
+          HOST: ${{ env.HOST }}
+          PORT: ${{ env.PORT }}
+          SOURCE_URL: ${{ env.SOURCE_URL }}
         run: |
           python3 update_m3u_acestream.py \
             --url "$SOURCE_URL" \
             --out-dir . \
             --combined-name playlist.m3u \
             --host "$HOST" \
-            --port "$PORT"HOST: ${{ env.HOST }}
-          PORT: ${{ env.PORT }}
-          SOURCE_URL: ${{ env.SOURCE_URL }}           --url "$SOURCE_URL" \
-            --out-dir . \
-            --combined-name playlist.m3u \
-            --host "$HOST" \
             --port $PORT
-
