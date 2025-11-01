@@ -12,6 +12,7 @@ env:
   HOST: '192.168.1.143'
   PORT: '8080'
   SOURCE_URL: "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u"
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -27,14 +28,18 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Descargar M3U origen
-        run: |
-          curl -fsSL "$SOURCE_URL" -o playlist.m3u
-
       - name: Ejecutar script para actualizar M3U
         run: |
           python3 update_m3u_acestream.py \
             --url "$SOURCE_URL" \
+            --out-dir . \
+            --combined-name playlist.m3u \
+            --host "$HOST" \
+            --port $PORT
+        env:
+          HOST: ${{ env.HOST }}
+          PORT: ${{ env.PORT }}
+          SOURCE_URL: ${{ env.SOURCE_URL }}           --url "$SOURCE_URL" \
             --out-dir . \
             --combined-name playlist.m3u \
             --host "$HOST" \
