@@ -16,27 +16,78 @@ env:
 jobs:
   update:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+          persist-credentials: true  # importante para poder pushear con GITHUB_TOKEN
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      
+
+      - name: Debug - entorno y ficheros
+        run: |
+          echo "PWD: $(pwd)"
+          echo "LISTADO:"
+          ls -la
+          echo "Python:"
+          python3 --version
+          echo "Variables:"
+          echo "HOST=$HOST"
+          echo "PORT=$PORT"
+          echo "SOURCE_URL=$SOURCE_URL"
+
+      - name: Instalación de dependencias (si aplica)
+        # modifica o elimina si no tienes requirements.txt
+        run: |
+          if [ -f requirements.txt ]; then
+            python3 -m pip install --upgrade pip
+            python3 -m pip install -r requirements.txt
+          else
+            echo "requirements.txt no encontrado, se omite pip install"
+          fi
+
       - name: Ejecutar script para actualizar M3U
         env:
           HOST: ${{ env.HOST }}
           PORT: ${{ env.PORT }}
           SOURCE_URL: ${{ env.SOURCE_URL }}
         run: |
+          set -x
+          # asegúrate de que update_m3u_acestream.py exista en la raíz o cambia la ruta
+          if [ ! -f update_m3u_acestream.py ]; then
+            echo "ERROR: update_m3u_acestream.py NO existe en la raíz del repo"
+            ls -la
+            exit 2
+          fi
+
           python3 update_m3u_acestream.py \
             --url "$SOURCE_URL" \
             --out-dir . \
             --combined-name playlist.m3u \
             --host "$HOST" \
-            --port $PORT
+            --port "$PORT"
+          echo "==== Contenido resultante (si existe) ===="
+          if [ -f playlist.m3u ]; then
+            wc -l playlist.m3u || true
+            head -n 40 playlist.m3u || true
+          else
+            echo "playlist.m3u no se generó."
+          fi
+
+      - name: Commit y push cambios (si hay)
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git add playlist.m3u || true
+          git status --porcelain
+          if git diff --cached --quiet; then
+            echo "No hay cambios para commitear."
+          else
+            git commit -m "Actualizar playlist generado por GitHub Actions" || echo "commit fallido"
+            git push origin HEAD:main
+          fi
