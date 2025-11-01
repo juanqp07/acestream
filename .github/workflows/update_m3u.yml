@@ -38,7 +38,7 @@ jobs:
   env:
     HOST: ${{ env.HOST }}
     PORT: ${{ env.PORT }}
-    SOURCE_URL: ${{ env.SOURCE_URL }}.
+    SOURCE_URL: ${{ env.SOURCE_URL }}
         env:
           HOST: ${{ env.HOST }}
           PORT: ${{ env.PORT }}
