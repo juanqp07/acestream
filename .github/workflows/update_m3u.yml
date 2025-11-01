@@ -30,11 +30,15 @@ jobs:
       - name: Ejecutar script para actualizar M3U
         run: |
           python3 update_m3u_acestream.py \
-            --url "$SOURCE_URL" \
-            --out-dir . \
-            --combined-name playlist.m3u \
-            --host "$HOST" \
-            --port $PORT
+          --url "$SOURCE_URL" \
+          --out-dir . \
+          --combined-name playlist.m3u \
+          --host "$HOST" \
+          --port $PORT
+  env:
+    HOST: ${{ env.HOST }}
+    PORT: ${{ env.PORT }}
+    SOURCE_URL: ${{ env.SOURCE_URL }}.
         env:
           HOST: ${{ env.HOST }}
           PORT: ${{ env.PORT }}
