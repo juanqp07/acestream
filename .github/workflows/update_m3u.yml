@@ -12,7 +12,6 @@ env:
   HOST: '192.168.1.143'
   PORT: '8080'
   SOURCE_URL: "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u"
-
 jobs:
   update:
     runs-on: ubuntu-latest
