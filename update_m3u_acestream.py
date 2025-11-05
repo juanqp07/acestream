@@ -45,7 +45,7 @@ def replace_acestream_and_existing(text: str, host: str, port: int) -> str:
     # 1) reemplaza acestream://<hash>
     def repl_acestream(m):
         h = m.group(1)
-        return f"http://{host}:{port}/ace/getstream?id={{h}}"
+        return f"http://{host}:{port}/ace/getstream?id={h}"
     text = PAT_ACESTREAM.sub(repl_acestream, text)
 
     # 2) reemplaza cualquier host:port/<hash> o host:port/ace/getstream?id=<hash>
@@ -53,7 +53,7 @@ def replace_acestream_and_existing(text: str, host: str, port: int) -> str:
         h = m.group("h")
         if not h:
             return m.group(0)  # no tocamos si no hay hash
-        return f"http://{host}:{port}/ace/getstream?id={{h}}"
+        return f"http://{host}:{port}/ace/getstream?id={h}"
     text = PAT_HOST_PORT_HASH.sub(repl_hostport, text)
 
     return text
@@ -85,15 +85,15 @@ def download_url(url: str, timeout: int = 30) -> str:
             snippet = body.decode("utf-8", errors="replace")
         except Exception:
             snippet = str(body)[:200]
-        raise RuntimeError(f"Error descargando URL {{url}}: HTTP {{e.code}} {{e.reason}}. Response snippet: {{snippet[:1000]}}")
+        raise RuntimeError(f"Error descargando URL {url}: HTTP {e.code} {e.reason}. Response snippet: {snippet[:1000]}")
     except Exception as e:
-        raise RuntimeError(f"Error descargando URL {{url}}: {{e}}")
+        raise RuntimeError(f"Error descargando URL {url}: {e}")
 
 def try_download_with_gateways(original_url: str, timeout: int = 30) -> str:
     """
     Intenta descargar la URL original; si detecta rutas /ipfs/ o /ipns/ probará gateways alternativos.
     Heurística:
-      - Si la URL tiene host ipfs.io, intentamos gateways alternativos primero (porque ipfs.io suele bloquear bots).
+      - Si la URL tiene host ipfs.io, probamos gateways alternativos primero (porque ipfs.io suele bloquear bots).
       - Si la URL contiene /ipfs/ o /ipns/, reconstruimos la URL con cada gateway y probamos.
       - Finalmente intentamos la original.
     """
@@ -113,19 +113,19 @@ def try_download_with_gateways(original_url: str, timeout: int = 30) -> str:
             for gw in ALTERNATIVE_GATEWAYS:
                 candidate = gw.rstrip("/") + ipfs_path
                 try:
-                    print(f"Intentando gateway {{candidate}} ...")
+                    print(f"Intentando gateway {candidate} ...")
                     return download_url(candidate, timeout=timeout)
                 except RuntimeError as e:
-                    print(f"Fallo {{candidate}}: {{e}}")
+                    print(f"Fallo {candidate}: {e}")
         # si no funciona con gateways, intentar la original al final
 
     # Intentamos la original (si tiene esquema)
     if parsed.scheme in ("http", "https"):
         try:
-            print(f"Descargando (original) {{original_url}} ...")
+            print(f"Descargando (original) {original_url} ...")
             return download_url(original_url, timeout=timeout)
         except RuntimeError as e:
-            print(f"Fallo descarga original: {{e}}")
+            print(f"Fallo descarga original: {e}")
 
     # Si es path IPFS/IPNS y no hemos tenido éxito aún, probar gateways (incluso si original no era ipfs.io)
     if is_ipfs_path:
@@ -136,14 +136,14 @@ def try_download_with_gateways(original_url: str, timeout: int = 30) -> str:
         for gw in ALTERNATIVE_GATEWAYS:
             candidate = gw.rstrip("/") + ipfs_path
             try:
-                print(f"Intentando gateway {{candidate}} ...")
+                print(f"Intentando gateway {candidate} ...")
                 return download_url(candidate, timeout=timeout)
             except RuntimeError as e:
-                print(f"Fallo {{candidate}}: {{e}}")
+                print(f"Fallo {candidate}: {e}")
 
     # Intento final con la original si no se intentó antes o por si no tenía schema
     try:
-        print(f"Ultimo intento con original: {{original_url}} ...")
+        print(f"Ultimo intento con original: {original_url} ...")
         return download_url(original_url, timeout=timeout)
     except RuntimeError as e:
         raise RuntimeError("No fue posible descargar la URL desde ningún gateway público.") from e
@@ -218,17 +218,17 @@ def main():
     for idx, (typ, src) in enumerate(sources, start=1):
         try:
             if typ == "url":
-                print(f"Descargando {{src}} ...")
+                print(f"Descargando {src} ...")
                 text = try_download_with_gateways(src)
-                base = safe_name_from_url(src, f"source_{{idx}}.m3u")
-                out_name = f"{{Path(base).stem}}_converted.m3u"
+                base = safe_name_from_url(src, f"source_{idx}.m3u")
+                out_name = f"{Path(base).stem}_converted.m3u"
             else:
                 fp = Path(src)
                 if not fp.exists():
-                    print(f"Advertencia: archivo de entrada no encontrado: {{src}}, se salta.")
+                    print(f"Advertencia: archivo de entrada no encontrado: {src}, se salta.")
                     continue
                 text = fp.read_text(encoding="utf-8")
-                out_name = f"{{fp.stem}}_converted.m3u"
+                out_name = f"{fp.stem}_converted.m3u"
 
             new_text = replace_acestream_and_existing(text, args.host, args.port)
             # Normaliza header
@@ -237,13 +237,13 @@ def main():
             out_path = out_dir / out_name
             if out_path.exists() and args.backup:
                 b = backup_file(out_path)
-                print(f"Backup creado: {{b}}")
+                print(f"Backup creado: {b}")
             out_path.write_text(new_text, encoding="utf-8")
-            print(f"Guardado: {{out_path}}")
+            print(f"Guardado: {out_path}")
             generated_paths.append(out_path)
             combined_parts.append(new_text)
         except Exception as e:
-            print(f"Error procesando {{src}}: {{e}}")
+            print(f"Error procesando {src}: {e}")
 
     # Crear combinado
     if combined_parts:
@@ -252,20 +252,19 @@ def main():
         combined_path = out_dir / args.combined_name
         if combined_path.exists() and args.backup:
             b = backup_file(combined_path)
-            print(f"Backup combinado creado: {{b}}")
+            print(f"Backup combinado creado: {b}")
         combined_path.write_text(combined, encoding="utf-8")
-        print(f"Archivo combinado guardado en: {{combined_path}}")
+        print(f"Archivo combinado guardado en: {combined_path}")
         generated_paths.append(combined_path)
 
     if args.commit and generated_paths:
         try:
-            msg = f"Actualizar M3U convertidos ({{now_ts()}})"
+            msg = f"Actualizar M3U convertidos ({now_ts()})"
             git_commit_and_push(generated_paths, msg)
             print("Commited & pushed.")
         except subprocess.CalledProcessError as e:
             print("Error al commitear/pushear:", e)
             sys.exit(3)
-
 
 if __name__ == "__main__":
     main()
