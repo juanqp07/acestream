@@ -11,7 +11,7 @@ permissions:
 env:
   HOST: '192.168.1.143'
   PORT: '8080'
-  SOURCE_URL: "https://bit.ly/peticiones1RFEF"
+  SOURCE_URL: "https://raw.githubusercontent.com/Icastresana/lista1/main/peticiones"
 
 jobs:
   update:
