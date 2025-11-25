@@ -9,8 +9,8 @@ permissions:
   contents: write
 
 env:
-  HOST: '192.168.1.143'
-  PORT: '8570'
+  HOST: 'ace.sjqp.win'
+  PORT: '8443'
   SOURCE_URL: "https://raw.githubusercontent.com/Icastresana/lista1/refs/heads/main/peticiones"
 
 jobs:
