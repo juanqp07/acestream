@@ -10,7 +10,7 @@ permissions:
 
 env:
   HOST: 'ace.sjqp.win'
-  PORT: '8443'
+  PORT: '8008'
   SOURCE_URL: "https://raw.githubusercontent.com/Icastresana/lista1/refs/heads/main/peticiones"
 
 jobs:
