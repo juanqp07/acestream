@@ -179,15 +179,7 @@ def safe_name_from_url(url: str, default: str) -> str:
     except Exception:
         return default
 
-def normalize_m3u_header(text: str) -> str:
-    # Asegura que el fichero empieza con una única línea #EXTM3U
-    # También filtra líneas #EXTGRP que el usuario no quiere
-    lines = text.strip().splitlines()
-    body = [
-        ln for ln in lines 
-        if ln.strip() != "#EXTM3U" and not ln.strip().startswith("#EXTGRP")
-    ]
-    return "#EXTM3U\n" + "\n".join(body).strip() + "\n"
+
 
 def main():
     p = argparse.ArgumentParser()
@@ -236,7 +228,6 @@ def main():
 
             new_text = replace_acestream_and_existing(text, args.host, args.port)
             # Normaliza header
-            new_text = normalize_m3u_header(new_text)
 
             out_path = out_dir / out_name
             if out_path.exists() and args.backup:
@@ -252,7 +243,7 @@ def main():
     # Crear combinado
     if combined_parts:
         combined = "\n".join(part.strip() for part in combined_parts if part)
-        combined = normalize_m3u_header(combined)
+        # combined = normalize_m3u_header(combined)
         combined_path = out_dir / args.combined_name
         if combined_path.exists() and args.backup:
             b = backup_file(combined_path)
