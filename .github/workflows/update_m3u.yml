@@ -1,18 +1,21 @@
-```yaml
 name: Actualizar M3U (acestream->http)
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch:
+    - cron: '*/15 * * * *'   # cada 15 minutos
+  workflow_dispatch:        # permite ejecutar manualmente desde la UI
 
 permissions:
   contents: write
 
+concurrency:
+  group: actualizar-m3u
+  cancel-in-progress: true
+
 env:
-  HOST: '192.168.1.143'
-  PORT: '8570'
-  SOURCE_URL: 'https://raw.githubusercontent.com/Icastresana/lista1/main/peticiones'
+  HOST: 192.168.1.143
+  PORT: 8570
+  SOURCE_URL: https://raw.githubusercontent.com/Icastresana/lista1/main/peticiones
 
 jobs:
   update:
@@ -23,33 +26,40 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
+          persist-credentials: true    # necesario para usar GITHUB_TOKEN al hacer push
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Debug entorno
+      - name: Debug - entorno y ficheros
         run: |
+          echo "EVENT=$GITHUB_EVENT_NAME"
+          echo "REF=$GITHUB_REF"
           pwd
           ls -la
           python --version
           echo "HOST=$HOST PORT=$PORT SOURCE_URL=$SOURCE_URL"
 
-      - name: Instalar dependencias
+      - name: Instalar dependencias si existe requirements.txt
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           fi
 
-      - name: Ejecutar script
+      - name: Ejecutar script para actualizar M3U
+        env:
+          HOST: ${{ env.HOST }}
+          PORT: ${{ env.PORT }}
+          SOURCE_URL: ${{ env.SOURCE_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -o errexit -o nounset -o pipefail
           python update_m3u_acestream.py \
             --url "$SOURCE_URL" \
             --out-dir . \
             --combined-name playlist.m3u \
             --host "$HOST" \
             --port "$PORT"
-```
