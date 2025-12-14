@@ -181,8 +181,12 @@ def safe_name_from_url(url: str, default: str) -> str:
 
 def normalize_m3u_header(text: str) -> str:
     # Asegura que el fichero empieza con una única línea #EXTM3U
+    # También filtra líneas #EXTGRP que el usuario no quiere
     lines = text.strip().splitlines()
-    body = [ln for ln in lines if ln.strip() != "#EXTM3U"]
+    body = [
+        ln for ln in lines 
+        if ln.strip() != "#EXTM3U" and not ln.strip().startswith("#EXTGRP")
+    ]
     return "#EXTM3U\n" + "\n".join(body).strip() + "\n"
 
 def main():
