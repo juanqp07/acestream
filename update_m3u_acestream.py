@@ -1,64 +1,83 @@
+#!/usr/bin/env python3
 import argparse
 import re
 import sys
 from pathlib import Path
 import urllib.request
 import urllib.error
+import os
 
 HEX40 = r"[0-9A-Fa-f]{40}"
 
-# 1) acestream://HASH
-PAT_ACESTREAM = re.compile(r"acestream://(" + HEX40 + r")", re.IGNORECASE)
-
-# 2) host:port/... where ... can be HASH or ace/getstream?id=HASH (captures the HASH)
-PAT_HOST_PORT_HASH = re.compile(
-    r"(?:https?://)?(?P<host>[^/\s:]+):(?P<port>\d{1,5})/(?:(?:ace/getstream\?id=)?(?P<h>" + HEX40 + r"))",
+# Regex que captura el HASH final (funciona para:
+#   - acestream://HASH
+#   - http(s)://host:port/.../HASH
+#   - http(s)://host:port/ace/getstream?id=HASH
+PAT_GENERIC_HASH = re.compile(
+    r"(?:acestream://|https?://[^/\s:]+:\d{1,5}/(?:ace/getstream\?id=)?)(%s)" % HEX40,
     re.IGNORECASE,
 )
 
-# (Optional) bare query id=HASH anywhere (to catch some odd forms)
-PAT_QUERY_ID = re.compile(r"([?&]id=)(" + HEX40 + r")", re.IGNORECASE)
+def fetch_url_content(url: str, timeout: int):
+    try:
+        with urllib.request.urlopen(url, timeout=timeout) as resp:
+            raw = resp.read()
+            # Intentamos decodificar como utf-8, si falla, fallback a latin-1
+            try:
+                return raw.decode("utf-8")
+            except UnicodeDecodeError:
+                return raw.decode("latin-1")
+    except urllib.error.URLError as e:
+        raise RuntimeError(f"Error descargando '{url}': {e}")
 
-def replace_link(url, new_host, new_port):
-    # Check if the URL is in acestream format
-    if re.match(PAT_ACESTREAM, url):
-        hash_match = re.search(PAT_ACESTREAM, url)
-        hash_value = hash_match.group(1)
-        return f"{new_host}:{new_port}/{hash_value}"
+def replace_hashes_in_text(text: str, new_host: str, new_port: int):
+    """
+    Reemplaza todas las apariciones detectadas por:
+      http://{new_host}:{new_port}/ace/getstream?id={HASH}
+    """
+    def _repl(m):
+        h = m.group(1)
+        return f"http://{new_host}:{new_port}/ace/getstream?id={h}"
 
-    # Check if the URL is in host:port format
-    if re.match(PAT_HOST_PORT_HASH, url):
-        host_match = re.search(PAT_HOST_PORT_HASH, url)
-        host_value = host_match.group('host')
-        port_value = host_match.group('port')
-        return f"{new_host}:{new_port}/{host_value}"
+    return PAT_GENERIC_HASH.sub(_repl, text)
 
-    # If the URL is neither, return it as is
-    return url
+def combine_sources(urls, inputs, timeout):
+    pieces = []
+    errors = []
+    # Procesar URLs remotas
+    for u in urls:
+        try:
+            pieces.append(fetch_url_content(u, timeout=timeout))
+        except Exception as e:
+            errors.append(str(e))
 
-def update_m3u(input_file, output_file, new_host, new_port):
-    if not input_file.exists():
-        print(f"El archivo M3U {input_file} no existe.")
-        return
+    # Procesar archivos locales
+    for p in inputs:
+        pth = Path(p)
+        if not pth.exists():
+            errors.append(f"Archivo local no encontrado: {p}")
+            continue
+        try:
+            pieces.append(pth.read_text(encoding="utf-8"))
+        except UnicodeDecodeError:
+            # Intentar con latin1
+            pieces.append(pth.read_text(encoding="latin-1"))
 
-    with open(input_file, "r") as file:
-        m3u_content = file.read()
+    return "\n".join(pieces), errors
 
-    # Replace all URLs in the M3U content
-    updated_m3u_content = re.sub(
-        r"(acestream://|https?://(?:[^/\s:]+):\d{1,5}/(?:ace/getstream\?id=)?)([0-9A-Fa-f]{40})",
-        lambda match: replace_link(match.group(0), new_host, new_port),
-        m3u_content,
-    )
+def write_backup_if_needed(output_path: Path, do_backup: bool):
+    if do_backup and output_path.exists():
+        i = 1
+        while True:
+            bak = output_path.with_name(output_path.name + f".bak{i}")
+            if not bak.exists():
+                output_path.replace(bak)
+                return bak
+            i += 1
+    return None
 
-    # Save the updated M3U content to the output file
-    with open(output_file, "w") as file:
-        file.write(updated_m3u_content)
-
-    print(f"Archivo M3U actualizado: {output_file}")
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Actualizar M3U (acestream -> http).")
+def main():
+    parser = argparse.ArgumentParser(description="Actualizar/convertir enlaces AceStream dentro de M3U(s).")
     parser.add_argument("--url", action="append", default=[], help="URL pública con M3U (repetible).")
     parser.add_argument("--input", action="append", default=[], help="Archivo local M3U (repetible).")
     parser.add_argument("--out-dir", default=".", help="Directorio de salida.")
@@ -66,19 +85,52 @@ if __name__ == "__main__":
     parser.add_argument("--host", default="127.0.0.1", help="Host destino para ace/getstream.")
     parser.add_argument("--port", type=int, default=6878, help="Puerto destino para ace/getstream.")
     parser.add_argument("--no-backup", dest="backup", action="store_false", help="No crear backups.")
-    parser.add_argument("--no-commit", dest="commit", action="store_false", help="No hacer commit/push.")
+    parser.add_argument("--no-commit", dest="commit", action="store_false", help="No hacer commit/push (no usado por ahora).")
     parser.add_argument("--timeout", type=int, default=30, help="Timeout descargas (segundos).")
 
     args = parser.parse_args()
 
-    if len(args.url) != 2:
-        print("Debes proporcionar dos enlaces URL.")
-        sys.exit(1)
+    # Validación básica: al menos una fuente (url o input)
+    if not args.url and not args.input:
+        print("Error: debes proporcionar al menos una fuente --url o --input.", file=sys.stderr)
+        sys.exit(2)
 
-    new_host = args.host
-    new_port = args.port
+    combined_text, errors = combine_sources(args.url, args.input, timeout=args.timeout)
 
-    if args.url:
-        update_m3u(args.url[0], args.url[1], new_host, new_port)
-    else:
-        update_m3u(args.input[0], args.input[1], new_host, new_port)
+    if not combined_text.strip():
+        print("Error: No se pudo leer ningún contenido válido de las fuentes proporcionadas.", file=sys.stderr)
+        for e in errors:
+            print("  -", e, file=sys.stderr)
+        sys.exit(3)
+
+    # Reemplazar hashes por la URL de streaming destino
+    updated = replace_hashes_in_text(combined_text, args.host, args.port)
+
+    out_dir = Path(args.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / args.combined_name
+
+    # Hacer backup si procede
+    try:
+        bak = write_backup_if_needed(out_path, args.backup)
+    except Exception as e:
+        print(f"Error creando backup: {e}", file=sys.stderr)
+        sys.exit(4)
+
+    try:
+        out_path.write_text(updated, encoding="utf-8")
+    except Exception as e:
+        print(f"Error escribiendo fichero de salida '{out_path}': {e}", file=sys.stderr)
+        # si hubo un backup, intentar restaurarlo (silencioso)
+        if bak and bak.exists():
+            bak.replace(out_path)
+        sys.exit(5)
+
+    print(f"Archivo M3U actualizado: {out_path}")
+    if errors:
+        print("Se produjeron algunos errores no fatales al obtener fuentes:", file=sys.stderr)
+        for e in errors:
+            print("  -", e, file=sys.stderr)
+
+if __name__ == "__main__":
+    main()
