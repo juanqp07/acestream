@@ -15,7 +15,7 @@ concurrency:
 env:
   HOST: 192.168.1.143
   PORT: 8570
-  SOURCE_URL: "https://bit.ly/peticiones1RFEF"
+  SOURCE_URL: "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_iptv.m3u"
 
 jobs:
   update:
