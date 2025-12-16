@@ -72,7 +72,8 @@ jobs:
           echo "Estado del repo:"
           git status --porcelain
 
-          if [ -n "$(git status --porcelain)" ]; then
+          # Verificar si hay cambios en playlist.m3u
+          if [ -n "$(git status --porcelain playlist.m3u)" ]; then
             git add playlist.m3u
             git commit -m "Auto: actualizar playlist.m3u"
             git push origin HEAD
