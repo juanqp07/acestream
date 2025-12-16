@@ -63,3 +63,19 @@ jobs:
             --combined-name playlist.m3u \
             --host "$HOST" \
             --port "$PORT"
+            
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          echo "Estado del repo:"
+          git status --porcelain
+
+          if [ -n "$(git status --porcelain)" ]; then
+            git add playlist.m3u
+            git commit -m "Auto: actualizar playlist.m3u"
+            git push origin HEAD
+          else
+            echo "No hay cambios para commitear."
+          fi
