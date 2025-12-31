@@ -15,7 +15,7 @@ concurrency:
 env:
   HOST: 192.168.1.143
   PORT: 8570
-  SOURCE_URL: "https://itsssl.com/AUEZM"
+  SOURCE_URL: "https://bit.ly/peticiones1RFEF"
 
 jobs:
   update:
