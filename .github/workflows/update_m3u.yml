@@ -18,7 +18,7 @@ env:
   HOST: 192.168.1.143
   PORT: 8570
   # Pon aquí la URL que quieras combinar (puedes definir SOURCE_URL en Settings > Actions > Variables)
-  SOURCE_URL: "https://ipfs.io/ipns/<TU_IPNS>/lista_fuera_iptv.m3u"
+  SOURCE_URL: "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u"
   COMBINED_NAME: "playlist.m3u"
 
 jobs:
