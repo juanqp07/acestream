@@ -18,7 +18,7 @@ env:
   HOST: acestream
   PORT: 6878
   # Pon aquí la URL que quieras combinar (puedes definir SOURCE_URL en Settings > Actions > Variables)
-  SOURCE_URL: "https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_iptv.m3u"
+  SOURCE_URL: "https://bit.ly/peticiones1RFEF"
   COMBINED_NAME: "playlist.m3u"
 
 jobs:
