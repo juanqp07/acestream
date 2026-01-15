@@ -17,6 +17,7 @@ env:
   PORT: 8570
   # Definimos las URLs separadas por espacios para usarlas en un bucle si fuera necesario
   SOURCE_URLS: >-
+    https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u
     https://bit.ly/peticiones1RFEF
     https://k51qzi5uqu5di462t7j4vu4akwfhvtjhy88qbupktvoacqfqe9uforjvhyi4wr.ipns.dweb.link/hashes_acestream.m3u
   OUT_DIR: "listas_procesadas"
