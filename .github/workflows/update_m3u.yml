@@ -1,10 +1,9 @@
 name: Actualizar M3U (acestream->http)
 
-# Ejecutar periódicamente y manualmente
 on:
   schedule:
-    - cron: '*/60 * * * *'   # cada 15 minutos (ajusta si prefieres otro intervalo)
-  workflow_dispatch:        # permite ejecutar manualmente desde la UI
+    - cron: '0 * * * *'  # Ejecuta cada hora (ajustado para no saturar)
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,12 +13,13 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # Valores por defecto; puedes sobreescribirlos en la UI / secrets
   HOST: acexy
   PORT: 8570
-  # Pon aquí la URL que quieras combinar (puedes definir SOURCE_URL en Settings > Actions > Variables)
-  SOURCE_URL: "https://bit.ly/peticiones1RFEF"
-  COMBINED_NAME: "playlist.m3u"
+  # Definimos las URLs separadas por espacios para usarlas en un bucle si fuera necesario
+  SOURCE_URLS: >-
+    https://bit.ly/peticiones1RFEF
+    https://k51qzi5uqu5di462t7j4vu4akwfhvtjhy88qbupktvoacqfqe9uforjvhyi4wr.ipns.dweb.link/hashes_acestream.m3u
+  OUT_DIR: "listas_procesadas"
 
 jobs:
   update:
@@ -31,100 +31,53 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Debug - entorno y ficheros
-        run: |
-          echo "EVENT=$GITHUB_EVENT_NAME"
-          echo "REF=$GITHUB_REF"
-          pwd
-          ls -la
-          python --version
-          echo "HOST=$HOST PORT=$PORT SOURCE_URL=$SOURCE_URL"
-          echo "WORKDIR $(pwd)"
-
-      - name: Instalar pip deps
+      - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
-          # Dependencias mínimas del script reforzado
           pip install requests urllib3
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Debug - probar descarga con curl (HTTP/2 HEAD y HTTP/1.1 GET)
+      - name: Ejecutar script para actualizar múltiples M3U
         run: |
-          echo "SOURCE_URL=${SOURCE_URL}"
-          echo "PROBANDO HEAD (HTTP/2 posible)"
-          curl -I -L -v -A 'Mozilla/5.0 (X11; Linux x86_64)' "${SOURCE_URL}" || true
-          echo "PROBANDO GET forzando HTTP/1.1"
-          curl --http1.1 -L -v -A 'Mozilla/5.0 (X11; Linux x86_64)' "${SOURCE_URL}" -o /tmp/prueba.m3u || true
-          echo "SIZE /tmp/prueba.m3u:"
-          ls -lh /tmp/prueba.m3u || true
-          echo "--- primera linea (preview) ---"
-          head -n 5 /tmp/prueba.m3u || true
-
-      - name: Ejecutar script para actualizar M3U
-        env:
-          HOST: ${{ env.HOST }}
-          PORT: ${{ env.PORT }}
-          SOURCE_URL: ${{ env.SOURCE_URL }}
-          COMBINED_NAME: ${{ env.COMBINED_NAME }}
-        run: |
-          set -o errexit -o nounset -o pipefail
-
-          # Verificar que el script existe
-          if [ ! -f update_m3u_acestream.py ]; then
-            echo "ERROR: update_m3u_acestream.py no encontrado en el repo. Asegúrate de agregarlo." >&2
-            exit 1
-          fi
+          # Convertimos el string de URLs en argumentos para el script
+          # Usamos un array para manejar correctamente las URLs
+          URL_ARGS=""
+          for url in ${{ env.SOURCE_URLS }}; do
+            URL_ARGS="$URL_ARGS --url $url"
+          done
 
           python update_m3u_acestream.py \
-            --url "${SOURCE_URL}" \
-            --out-dir . \
-            --combined-name "${COMBINED_NAME}" \
-            --host "${HOST}" \
-            --port "${PORT}" \
-            --timeout 30 || true
+            $URL_ARGS \
+            --out-dir ${{ env.OUT_DIR }} \
+            --host "${{ env.HOST }}" \
+            --port "${{ env.PORT }}" \
+            --timeout 45
 
-      - name: Commit y push si hay cambios en playlist.m3u
+      - name: Commit y push de cambios
         env:
-          GIT_COMMITTER_NAME: "github-actions[bot]"
-          GIT_COMMITTER_EMAIL: "github-actions[bot]@users.noreply.github.com"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Configurar git
-          git config user.name "${GIT_COMMITTER_NAME}"
-          git config user.email "${GIT_COMMITTER_EMAIL}"
-
-          echo "Estado del repo (porcelain):"
-          git status --porcelain || true
-
-          # Solo commitear si hay cambios en el fichero final
-          if [ -n "$(git status --porcelain "${COMBINED_NAME}" || true)" ]; then
-            git add "${COMBINED_NAME}"
-            # Evitar fallar si no hay cambios de hecho (doble-check)
-            if git diff --staged --quiet; then
-              echo "No hay cambios para commitear."
-            else
-              git commit -m "Auto: actualizar ${COMBINED_NAME}"
-              # Usar token provisto por Actions (persist-credentials: true)
-              git push origin HEAD || {
-                echo "Push falló; mostrando remote info"
-                git remote -v
-                exit 1
-              }
-              echo "Cambios empujados."
-            fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Añadir todos los archivos procesados en la carpeta de salida
+          git add ${{ env.OUT_DIR }}/*.m3u
+          
+          if git diff --staged --quiet; then
+            echo "Sin cambios en las listas."
           else
-            echo "No hay cambios en ${COMBINED_NAME} para commitear."
+            git commit -m "Auto: actualización de listas AceStream $(date +'%Y-%m-%d %H:%M')"
+            git push origin HEAD
           fi
 
-      - name: Optional - subir artefacto (playlist) para inspección
+      - name: Subir artefactos
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playlist-m3u
-          path: ./${{ env.COMBINED_NAME }}
+          name: m3u-results
+          path: ${{ env.OUT_DIR }}/*.m3u
