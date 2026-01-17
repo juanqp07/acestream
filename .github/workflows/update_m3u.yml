@@ -13,8 +13,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  HOST: acexy
-  PORT: 8570
+  HOST: orchestrator
+  PORT: 8121
   # Definimos las URLs separadas por espacios para usarlas en un bucle si fuera necesario
   SOURCE_URLS: >-
     https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u
