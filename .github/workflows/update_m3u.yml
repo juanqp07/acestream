@@ -45,8 +45,6 @@ jobs:
           pip install requests urllib3
 
       - name: Ejecutar script para actualizar múltiples M3U
-        env:
-          MEDIAFLOW_PASSWORD: ${{ secrets.MEDIAFLOW_PASSWORD }}
         run: |
           # Convertimos el string de URLs en argumentos para el script
           # Usamos un array para manejar correctamente las URLs

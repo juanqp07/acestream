@@ -39,19 +39,18 @@ def fetch_url_content(url: str, timeout: int, session: requests.Session):
     encoding = resp.encoding or "utf-8"
     return resp.content.decode(encoding, errors="ignore")
 
-def replace_hashes_in_text(text: str, new_host: str, new_port: int, mode: str, password: str):
+def replace_hashes_in_text(text: str, new_host: str, new_port: int, mode: str):
     def _repl(m):
         content_id = m.group(1)
         if mode == "mediaflow":
-            return f"https://{new_host}:{new_port}/proxy/acestream/stream?id={content_id}&api_password={password}"
+            return f"https://{new_host}:{new_port}/proxy/acestream/stream?id={content_id}&api_password=${{MEDIAFLOW_PASSWORD}}"
         else: # acexy
             return f"http://{new_host}:{new_port}/ace/getstream?id={content_id}"
     return PAT_GENERIC_HASH.sub(_repl, text)
 
 def process_content(content, output_path, args):
     """Lógica para transformar y guardar el contenido"""
-    password = os.environ.get("MEDIAFLOW_PASSWORD", "")
-    updated = replace_hashes_in_text(content, args.host, args.port, args.mode, password)
+    updated = replace_hashes_in_text(content, args.host, args.port, args.mode)
     
     if args.backup and output_path.exists():
         bak = output_path.with_suffix(output_path.suffix + ".bak")
@@ -71,9 +70,6 @@ def main():
     parser.add_argument("--no-backup", dest="backup", action="store_false", help="No crear backups.")
     parser.add_argument("--timeout", type=int, default=20, help="Timeout segundos.")
     args = parser.parse_args()
-
-    if args.mode == "mediaflow" and not os.environ.get("MEDIAFLOW_PASSWORD"):
-        logging.warning("El modo mediaflow está activo pero MEDIAFLOW_PASSWORD no está configurada en las variables de entorno.")
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
