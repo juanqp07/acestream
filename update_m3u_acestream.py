@@ -43,7 +43,7 @@ def replace_hashes_in_text(text: str, new_host: str, new_port: int, mode: str):
     def _repl(m):
         content_id = m.group(1)
         if mode == "mediaflow":
-            return f"https://{new_host}:{new_port}/proxy/acestream/stream?id={content_id}&api_password=${{MEDIAFLOW_PASSWORD}}"
+            return f"http://{new_host}:{new_port}/proxy/acestream/stream?id={content_id}&api_password=${{MEDIAFLOW_PASSWORD}}"
         else: # acexy
             return f"http://{new_host}:{new_port}/ace/getstream?id={content_id}"
     return PAT_GENERIC_HASH.sub(_repl, text)
