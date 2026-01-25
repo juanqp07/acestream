@@ -47,8 +47,6 @@ http://mediaflow:8888/proxy/acestream/stream?id=9afc89481b721ce6c326c85e47148676
 http://mediaflow:8888/proxy/acestream/stream?id=d5b2c6b940cf3df5e8f9dc6f000f0ea23a10b151&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/DAZN%201%20BAR.png" tvg-id="DAZN 1 HD" group-title="DAZN", DAZN 1 BAR FHD --> NEW ERA
 http://mediaflow:8888/proxy/acestream/stream?id=1e7f5efc1913efaf7042a9b1a49d1f9adc5bc187&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 FHD --> NEW ERA
-http://mediaflow:8888/proxy/acestream/stream?id=fb2dd566824658eeab27aae19a01c09430f1a97d&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 FHD --> NEW ERA VI
 http://mediaflow:8888/proxy/acestream/stream?id=43004e955731cd3afcc34d24e5178d4b427bff37&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 --> ELCANO
@@ -561,6 +559,8 @@ http://mediaflow:8888/proxy/acestream/stream?id=d2374e2375a4275738e0dbed2f47d011
 http://mediaflow:8888/proxy/acestream/stream?id=fcd7621df513f600652b4813d5d8fd1daed60058&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/refs/heads/master/icon/24%20Horas%20HD.png" tvg-id="24 Horas" group-title="TDT", 24 HORAS HD --> NEW ERA
 http://mediaflow:8888/proxy/acestream/stream?id=cc5ed178702605513cd18b4899c4be954d306cca&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://github.com/davidmuma/picons_dobleM/blob/master/icon/Arag%C3%B3n%20TV%20Internacional.png?raw=true" tvg-id="Aragón TV" group-title="TDT", ARAGON TV HD --> NEW ERA
+http://mediaflow:8888/proxy/acestream/stream?id=ba4597903f099695e7d6bcc5938f91cb0798006b&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/C3yh66tp/cuatro.png" tvg-id="Cuatro HD" group-title="TDT", CUATRO FHD --> NEW ERA
 http://mediaflow:8888/proxy/acestream/stream?id=8d66979e705a8b532b9243bbc0862c0f1c734ef0&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/C3yh66tp/cuatro.png" tvg-id="Cuatro HD" group-title="TDT", CUATRO --> ELCANO
