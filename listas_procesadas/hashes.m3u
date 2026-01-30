@@ -25,5 +25,5 @@
 
 #EXTINF:-1 group-title="EUROSPORT" tvg-logo="https://i.ibb.co/r2Yd7xD/euro1.png" tvg-name="Eurosport 1 1080p",Eurosport 1 1080p
 http://mediaflow:8888/proxy/acestream/stream?id=0db68ab752b50e6bb257eef22d102c1d29cd92ea&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 group-title="EUROSPORT" tvg-logo="https://i.ibb.co/r2Yd7xD/euro1.png" tvg-name="Eurosport 1 720p",Eurosport 1 720p
-http://mediaflow:8888/proxy/acestream/stream?id=a7b42f9d65636d1b1d9316d3e91ebe12b192658c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 group-title="MOVISTAR" tvg-logo="https://i.ibb.co/hFYPWbpJ/plus.png" tvg-name="MOVISTAR PLUS 1080p",MOVISTAR PLUS 1080p
+http://mediaflow:8888/proxy/acestream/stream?id=1ab443f5b4beb6d586f19e8b25b9f9646cf2ab78&api_password=f8dd309e393f310da37188e5374cbd01163e1940
