@@ -589,10 +589,6 @@ http://mediaflow:8888/proxy/acestream/stream?id=86495fe134ff065d5217497babe6be33
 http://mediaflow:8888/proxy/acestream/stream?id=6058a4c0f2569bd81c687aa7dfb48b8a9569fb29&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Magenta Sport 11 HD (DE) --> SPORT TV
 http://mediaflow:8888/proxy/acestream/stream?id=c21316ad4b7f44eaf6fcfb2c245c46de8b746cc6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Mantenimiento --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=456cc2aa7c2e7c3f98681c6b2da2efb465108665&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Mantenimiento --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=625d75abc29638bff3861c0451d787bd6848cf8b&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", MIXED TV 2 (solo eventos) --> NEW ERA III
 http://mediaflow:8888/proxy/acestream/stream?id=aa6faf8d1fca70d1e79ca0a6647ac15fcecea2f6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", MIXED+ (solo eventos) --> NEW ERA III
