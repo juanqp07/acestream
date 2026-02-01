@@ -99,6 +99,10 @@ http://mediaflow:8888/proxy/acestream/stream?id=714e14e6d6e27660fd25a75b57b0ac55
 http://mediaflow:8888/proxy/acestream/stream?id=ef2abf419586d9876370be127ad592dbb41b126a&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/r2Yd7xD/euro1.png" tvg-id="Eurosport 1 HD" group-title="EUROSPORT", EUROSPORT 1 HD --> NEW LOOP
 http://mediaflow:8888/proxy/acestream/stream?id=547ab7146a86d6119c9332c011669544720124e3&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" tvg-id="Eurosport 2" group-title="EUROSPORT", EUROSPORT 2 FHD --> NEW ERA
+http://mediaflow:8888/proxy/acestream/stream?id=dc4ccb9e72550bc72be9360aa7d77e337ad11ecc&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" tvg-id="Eurosport 2" group-title="EUROSPORT", EUROSPORT 2 FHD --> NEW ERA
+http://mediaflow:8888/proxy/acestream/stream?id=2773b39926d15dd3d9495d94c4050604792d7031&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" tvg-id="Eurosport 2" group-title="EUROSPORT", EUROSPORT 2 FHD --> NEW ERA VI
 http://mediaflow:8888/proxy/acestream/stream?id=37d6f1aabcde81ee6e4873b4db6b7bb8964af8bf&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" tvg-id="Eurosport 2" group-title="EUROSPORT", EUROSPORT 2 HD --> SPORT TV
