@@ -42,12 +42,10 @@ http://mediaflow:8888/proxy/acestream/stream?id=5c910d614894635153a7d42de98cc2e4
 http://mediaflow:8888/proxy/acestream/stream?id=24f940fef7e270b6b3ae5d9dc713a80c8345cfba&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="Eurosport 2" tvg-logo="https://i.ibb.co/M6h4Qyd/euro2.png" group-title="EUROSPORT",Eurosport 2 *
 http://mediaflow:8888/proxy/acestream/stream?id=f5908690485ae2facecf3074446ba4315f07a193&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="DAZN F1 HD" tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" group-title="FORMULA 1",DAZN F1 720p *
-http://mediaflow:8888/proxy/acestream/stream?id=27d11bbeb3026231d52de16b1fac48da7a099247&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="DAZN F1 HD" tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" group-title="FORMULA 1",DAZN F1 1080p *
-http://mediaflow:8888/proxy/acestream/stream?id=d719181097d256073844390b3e094fbcb1bceaa4&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="DAZN F1 HD" tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" group-title="FORMULA 1",DAZN F1 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=895d08633bb22c2573281655cf3ca44de476cc73&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-id="DAZN F1 HD" tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" group-title="FORMULA 1",DAZN F1 1080p *
+http://mediaflow:8888/proxy/acestream/stream?id=d719181097d256073844390b3e094fbcb1bceaa4&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="LaLiga TV Hypermotion HD" tvg-logo="https://i.ibb.co/CBdGc9f/hypermotion1.png" group-title="HYPERMOTION",LaLiga TV Hypermotion 720p *
 http://mediaflow:8888/proxy/acestream/stream?id=1f75d92098580443857caa95a719103cb83781b0&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="LaLiga TV Hypermotion HD" tvg-logo="https://i.ibb.co/CBdGc9f/hypermotion1.png" group-title="HYPERMOTION",LaLiga TV Hypermotion 1080p *
@@ -79,9 +77,9 @@ http://mediaflow:8888/proxy/acestream/stream?id=a231b2fa1f7754433efeb8bb8d69d7b9
 #EXTINF:-1 tvg-id="DAZN LaLiga HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/spain/dazn-laliga-es.png" group-title="LA LIGA",DAZN LaLiga **
 http://mediaflow:8888/proxy/acestream/stream?id=9c75f1d190c518cfe0f236415b8dccc1f676ef3b&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ LaLiga HD" tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" group-title="LA LIGA",M+ LaLiga 720p *
-http://mediaflow:8888/proxy/acestream/stream?id=3ace1463a7cad979c3a4002b245487e9982e9f1a&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="M+ LaLiga HD" tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" group-title="LA LIGA",M+ LaLiga 720p *
 http://mediaflow:8888/proxy/acestream/stream?id=f863873de9f7b2996dde19a0657dd89835af3007&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-id="M+ LaLiga HD" tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" group-title="LA LIGA",M+ LaLiga 720p *
+http://mediaflow:8888/proxy/acestream/stream?id=3ace1463a7cad979c3a4002b245487e9982e9f1a&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ LaLiga HD" tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" group-title="LA LIGA",M+ LaLiga 720p **
 http://mediaflow:8888/proxy/acestream/stream?id=14b6cd8769cd485f2cffdca64be9698d9bfeac58&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ LaLiga HD" tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" group-title="LA LIGA",M+ LaLiga 1080p *
@@ -133,9 +131,9 @@ http://mediaflow:8888/proxy/acestream/stream?id=6b15368775693c33c49fab02e7900c19
 #EXTINF:-1 tvg-id="M+ Deportes 2 HD" tvg-logo="https://i.ibb.co/q95fBKV/deportes2.png" group-title="MOVISTAR DEPORTES",M+ Deportes 2 720p **
 http://mediaflow:8888/proxy/acestream/stream?id=bfa01c11c5c6b7a616a516de4f2c769a89d26b25&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Deportes 2 HD" tvg-logo="https://i.ibb.co/q95fBKV/deportes2.png" group-title="MOVISTAR DEPORTES",M+ Deportes 2 1080p **
-http://mediaflow:8888/proxy/acestream/stream?id=890901fa742b19d8808cf49f19db2d3016437c56&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="M+ Deportes 2 HD" tvg-logo="https://i.ibb.co/q95fBKV/deportes2.png" group-title="MOVISTAR DEPORTES",M+ Deportes 2 1080p **
 http://mediaflow:8888/proxy/acestream/stream?id=f0ee7a2b43c1df5ea9e4fac5bf876d5bef4372b0&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-id="M+ Deportes 2 HD" tvg-logo="https://i.ibb.co/q95fBKV/deportes2.png" group-title="MOVISTAR DEPORTES",M+ Deportes 2 1080p **
+http://mediaflow:8888/proxy/acestream/stream?id=890901fa742b19d8808cf49f19db2d3016437c56&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Deportes 3" tvg-logo="https://i.ibb.co/jDg5qWD/deportes3.png" group-title="MOVISTAR DEPORTES",M+ Deportes 3 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=f4d9011721fad5098febbe4d7c078a582e176a01&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Deportes 3" tvg-logo="https://i.ibb.co/jDg5qWD/deportes3.png" group-title="MOVISTAR DEPORTES",M+ Deportes 3 1080p **
@@ -151,9 +149,9 @@ http://mediaflow:8888/proxy/acestream/stream?id=7b361369a40046ad3011086f9d4ae298
 #EXTINF:-1 tvg-id="M+ Deportes 6" tvg-logo="https://www.movistarplus.es/recorte/n/caratula5/M2114916V1621463" group-title="MOVISTAR DEPORTES",M+ Deportes 6 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=e6cd9205e26b3b6680f607030c702e911272524a&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Ellas Vamos HD" tvg-logo="https://i.ibb.co/rx9hnHz/ellas.png" group-title="MOVISTAR DEPORTES",M+ Ellas Vamos 1080p *
-http://mediaflow:8888/proxy/acestream/stream?id=a5a38bd6628ffa68459d76132c4d864999d9940b&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="M+ Ellas Vamos HD" tvg-logo="https://i.ibb.co/rx9hnHz/ellas.png" group-title="MOVISTAR DEPORTES",M+ Ellas Vamos 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=80e290013709091ec93d542754bff27cc90ac996&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-id="M+ Ellas Vamos HD" tvg-logo="https://i.ibb.co/rx9hnHz/ellas.png" group-title="MOVISTAR DEPORTES",M+ Ellas Vamos 1080p *
+http://mediaflow:8888/proxy/acestream/stream?id=a5a38bd6628ffa68459d76132c4d864999d9940b&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://www.mundoplus.tv/wp-content/uploads/2023/03/golf2_movistarplus.jpg" group-title="MOVISTAR DEPORTES",M+ Golf 720p *
 http://mediaflow:8888/proxy/acestream/stream?id=f60535a458b3c114283e2f433379144345beddd6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://www.mundoplus.tv/wp-content/uploads/2023/03/golf2_movistarplus.jpg" group-title="MOVISTAR DEPORTES",M+ Golf 1080p *
@@ -209,9 +207,9 @@ http://mediaflow:8888/proxy/acestream/stream?id=e7ddca738693a902ce34fb80788b2206
 #EXTINF:-1 tvg-logo="https://cdn.mitvstatic.com/channels/mx_espn-2_m.png" group-title="DEPORTES",ESPN 2 MX 1080p **
 http://mediaflow:8888/proxy/acestream/stream?id=9dfd7e896ad0ff817eb71e3096f0cfa11d43169b&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://img.3cat.cat/multimedia/jpg/1/5/1697802708951.jpg" group-title="DEPORTES",Esport3 720p *
-http://mediaflow:8888/proxy/acestream/stream?id=ff03650163b9456d59ed5f262aa3ab2e19831e6d&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://img.3cat.cat/multimedia/jpg/1/5/1697802708951.jpg" group-title="DEPORTES",Esport3 720p *
 http://mediaflow:8888/proxy/acestream/stream?id=739792a3225e5eb3056f4faa7b1137c7f161f23c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://img.3cat.cat/multimedia/jpg/1/5/1697802708951.jpg" group-title="DEPORTES",Esport3 720p *
+http://mediaflow:8888/proxy/acestream/stream?id=ff03650163b9456d59ed5f262aa3ab2e19831e6d&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://img.3cat.cat/multimedia/jpg/1/5/1697802708951.jpg" group-title="DEPORTES",Esport3 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=21bc11d195f5753c396e390c215952d21541d04d&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://img.3cat.cat/multimedia/jpg/1/5/1697802708951.jpg" group-title="DEPORTES",Esport3 1080p **
@@ -227,18 +225,16 @@ http://mediaflow:8888/proxy/acestream/stream?id=177796041773be99b489dd3ce86144f2
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/df/Logo_Primera_RFEF_2021.png/revision/latest?cb=20230620215900&path-prefix=es" group-title="DEPORTES",RFEF TV 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=7b742628b9f7e82902bdbc1ff92eba1988875cfc&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/df/Logo_Primera_RFEF_2021.png/revision/latest?cb=20230620215900&path-prefix=es" group-title="DEPORTES",RFEF TV 1080p **
-http://mediaflow:8888/proxy/acestream/stream?id=854ff9c607101791346111cd2366a392c3b8c351&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/df/Logo_Primera_RFEF_2021.png/revision/latest?cb=20230620215900&path-prefix=es" group-title="DEPORTES",RFEF TV 1080p **
 http://mediaflow:8888/proxy/acestream/stream?id=3fbc1b7dc316f19b77e7f7cfc775a0af67adcc7f&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="Teledeporte HD" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 720p **
 http://mediaflow:8888/proxy/acestream/stream?id=b0d1489c9f3239349665ad5ab423363f2b02e5ae&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="Teledeporte HD" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=b35b3eb8e22365bf3469efd6d1f3b82618a6e18a&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="Teledeporte HD" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 1080p **
-http://mediaflow:8888/proxy/acestream/stream?id=3b50a1dca0977e3761d016edd79314ab797f74f6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="Teledeporte HD" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 1080p **
 http://mediaflow:8888/proxy/acestream/stream?id=77cf022557c56cdf8d8115f50e61f846ad72ee05&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://img.3cat.cat/multimedia/png/0/2/1697462461920.png" group-title="DEPORTES",TV3 CAT *
-http://mediaflow:8888/proxy/acestream/stream?id=fd44b9accd1b210f7b06631296fc24bcf31f1cdc&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-id="Teledeporte HD" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 1080p **
+http://mediaflow:8888/proxy/acestream/stream?id=3b50a1dca0977e3761d016edd79314ab797f74f6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://img.3cat.cat/multimedia/png/0/2/1697462461920.png" group-title="DEPORTES",TV3 CAT *
 http://mediaflow:8888/proxy/acestream/stream?id=16589aeca0df65612bd7bcd4e55c0a63f5750de2&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://img.3cat.cat/multimedia/png/0/2/1697462461920.png" group-title="DEPORTES",TV3 CAT *
+http://mediaflow:8888/proxy/acestream/stream?id=fd44b9accd1b210f7b06631296fc24bcf31f1cdc&api_password=f8dd309e393f310da37188e5374cbd01163e1940
