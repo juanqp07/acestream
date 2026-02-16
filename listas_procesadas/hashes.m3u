@@ -30,8 +30,6 @@ http://mediaflow:8888/proxy/acestream/stream?id=53962d7fb865aff73b34a3afb2905cd4
 http://mediaflow:8888/proxy/acestream/stream?id=d7e6b6bb1666740a21099fe6ceb0178a14f58e0c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://www.acb.com/docs/descarga/logos/liga_endesa/JPG/ligaendesa_vertical_positivo.jpg" group-title="DEPORTES",ACB EVENTO 02 **
 http://mediaflow:8888/proxy/acestream/stream?id=22b702984a0db43fd371c30e2df150b2336551cd&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://www.acb.com/docs/descarga/logos/liga_endesa/JPG/ligaendesa_vertical_positivo.jpg" group-title="DEPORTES",ACB EVENTO 03 720p *
-http://mediaflow:8888/proxy/acestream/stream?id=119087e842ea8857124b9405b10bb6cfffd2900c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://www.acb.com/docs/descarga/logos/liga_endesa/JPG/ligaendesa_vertical_positivo.jpg" group-title="DEPORTES",ACB EVENTO 03 **
 http://mediaflow:8888/proxy/acestream/stream?id=02ec118ee4586d96df9115ffc486be9a499d00d9&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://cdn-bgp.bluestacks.com/BGP/us/gametiles_com.digiturk.ligtv.jpg" group-title="DEPORTES",Bein Sports 3 TR 720p *
