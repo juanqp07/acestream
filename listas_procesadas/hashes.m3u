@@ -38,8 +38,6 @@ http://mediaflow:8888/proxy/acestream/stream?id=a70a1605f69c8379e04094df96922a42
 http://mediaflow:8888/proxy/acestream/stream?id=b63fcadc2390455d8a328f6c16b8b0a9adec21a3&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKBCa6SydXxbOh3qbRLTAWW6FOnRo5nXa9kw&s" group-title="LA LIGA",SKY Sports LaLiga 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=d58f619d860d29cd47720055b9bb842199971da1&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="M+ Deportes HD" tvg-logo="https://i.ibb.co/CV4CLjz/deportes.png" group-title="MOVISTAR DEPORTES",M+ Deportes 720p *
-http://mediaflow:8888/proxy/acestream/stream?id=6e031aed136bf97d8667fcd5fc49c73256928281&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Deportes HD" tvg-logo="https://i.ibb.co/CV4CLjz/deportes.png" group-title="MOVISTAR DEPORTES",M+ Deportes 720p **
 http://mediaflow:8888/proxy/acestream/stream?id=2f3cfd199a49819cbd129689a840dc3d23ab93aa&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Deportes 2 HD" tvg-logo="https://i.ibb.co/q95fBKV/deportes2.png" group-title="MOVISTAR DEPORTES",M+ Deportes 2 720p *
@@ -52,7 +50,5 @@ http://mediaflow:8888/proxy/acestream/stream?id=3774d8feab016ca766b35ea8488e7514
 http://mediaflow:8888/proxy/acestream/stream?id=f0ee7a2b43c1df5ea9e4fac5bf876d5bef4372b0&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="Teledeporte HD" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 720p **
 http://mediaflow:8888/proxy/acestream/stream?id=b0d1489c9f3239349665ad5ab423363f2b02e5ae&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="Teledeporte HD" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 1080p **
-http://mediaflow:8888/proxy/acestream/stream?id=77cf022557c56cdf8d8115f50e61f846ad72ee05&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="Teledeporte HD" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 1080p **
 http://mediaflow:8888/proxy/acestream/stream?id=3b50a1dca0977e3761d016edd79314ab797f74f6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
