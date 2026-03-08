@@ -124,13 +124,13 @@ http://mediaflow:8888/proxy/acestream/stream?id=b5f3cc5cd66c98bae9d65df43ecee6c0
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=88d7cdd80be237ae21314f7f1b6582991498e8ba&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=d719181097d256073844390b3e094fbcb1bceaa4&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=895d08633bb22c2573281655cf3ca44de476cc73&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=bcf9dc38f92e90a71b87bd54b3bac91b76d09a69&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+http://mediaflow:8888/proxy/acestream/stream?id=d719181097d256073844390b3e094fbcb1bceaa4&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=b08e158ea3f5c72084f5ff8e3c30ca2e4d1ff6d1&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=bcf9dc38f92e90a71b87bd54b3bac91b76d09a69&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=fd53cfa7055fe458d4f5c0ff59a06cd43723be55&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 HD --> NEW LOOP
@@ -230,17 +230,17 @@ http://mediaflow:8888/proxy/acestream/stream?id=3c4185422b04ef24c80e015210339f80
 #EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA FHD --> NEW ERA VI
 http://mediaflow:8888/proxy/acestream/stream?id=b3bdd6ef7f795c4f321a3ce5cf4907338f462929&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=f863873de9f7b2996dde19a0657dd89835af3007&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=3ace1463a7cad979c3a4002b245487e9982e9f1a&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=f863873de9f7b2996dde19a0657dd89835af3007&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=14b6cd8769cd485f2cffdca64be9698d9bfeac58&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=0febfb5cac3384f487d55c559bbfc877db2d0357&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=00c9bc9c5d7d87680a5a6bed349edfa775a89947&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=4b528d10eaad747ddf52251206177573ee3e9f74&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=00c9bc9c5d7d87680a5a6bed349edfa775a89947&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/yfV1Q8n/liga.png" tvg-id="M+ LaLiga HD" group-title="LA LIGA", M+ LALIGA --> SPORT TV
 http://mediaflow:8888/proxy/acestream/stream?id=31c19ffb3472c289c5bbbbc174449c8ed0d19e38&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Tc97zSb/liga2.png" tvg-id="M+ LaLiga 2 HD" group-title="LA LIGA", M+ LALIGA 2 FHD --> NEW ERA
@@ -268,11 +268,11 @@ http://mediaflow:8888/proxy/acestream/stream?id=63e4713e8379f2ebf5e6ed9aa00fbf78
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones.png" tvg-id="M+ Liga de Campeones HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=91b2a1fe85f5bb4a6cf9ef6d01cc65883d986920&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones.png" tvg-id="M+ Liga de Campeones HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=97df5b7824948972d041d8ca2a4d29c90b641bc9&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones.png" tvg-id="M+ Liga de Campeones HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=9db029dff6a9c637d1f670e78dbc1a479b9b406e&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones.png" tvg-id="M+ Liga de Campeones HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=2b51710cee513e8939785fa3e7980f32d4e0415f&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones.png" tvg-id="M+ Liga de Campeones HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=97df5b7824948972d041d8ca2a4d29c90b641bc9&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones.png" tvg-id="M+ Liga de Campeones HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES --> SPORT TV
 http://mediaflow:8888/proxy/acestream/stream?id=e572a5178ff72eed7d1d751a18b4b3419699f370&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones%202.png" tvg-id="M+ Liga de Campeones 2 HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES 2 FHD --> NEW ERA
@@ -287,6 +287,8 @@ http://mediaflow:8888/proxy/acestream/stream?id=4b18a3b32df5960ed950fa907f8d509b
 http://mediaflow:8888/proxy/acestream/stream?id=ea03cc51980996ba6f2da49e30eee1de8a66ae54&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones%202.png" tvg-id="M+ Liga de Campeones 2 HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES 2 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=47188da7d2e4beaee82cff174f223fdd23f78fa6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones%202.png" tvg-id="M+ Liga de Campeones 2 HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES 2 --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=8156912ae14f6174a19c8a4efcf36a06e847f632&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones%202.png" tvg-id="M+ Liga de Campeones 2 HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES 2 --> SPORT TV
 http://mediaflow:8888/proxy/acestream/stream?id=338b5de78b0b40a6f9ca3cc0cf9be93341b9ceea&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/M%2B%20Liga%20de%20Campeones%203.png" tvg-id="M+ Liga de Campeones 3 HD" group-title="LIGA DE CAMPEONES", LIGA DE CAMPEONES 3 FHD --> NEW ERA
@@ -422,9 +424,9 @@ http://mediaflow:8888/proxy/acestream/stream?id=f51674b1dd1ab5a668fa97a0f13a4906
 #EXTINF:-1 tvg-logo="https://i.ibb.co/gWMRpFB/vamos.png" tvg-id="M+ Vamos HD" group-title="MOVISTAR DEPORTES", MOVISTAR VAMOS --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=5e310dbffed8c941d20ad819cb8ef43c34b07884&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/gWMRpFB/vamos.png" tvg-id="M+ Vamos HD" group-title="MOVISTAR DEPORTES", MOVISTAR VAMOS --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=b46a524780cf0ac5e533491fe79389d6198acf2c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://i.ibb.co/gWMRpFB/vamos.png" tvg-id="M+ Vamos HD" group-title="MOVISTAR DEPORTES", MOVISTAR VAMOS --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=a9299052e9a16e5e2924e1fdd00b877c374f9e96&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/gWMRpFB/vamos.png" tvg-id="M+ Vamos HD" group-title="MOVISTAR DEPORTES", MOVISTAR VAMOS --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=b46a524780cf0ac5e533491fe79389d6198acf2c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg69swJU6Lvcy1YUmg_Y2JlCTXWM1ulT883g&s" tvg-id="" group-title="NBA", NBA EVENTOS 1 --> NEW ERA
 http://mediaflow:8888/proxy/acestream/stream?id=3cd63bd01b6443c715467730a489f1ece7c1a306&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg69swJU6Lvcy1YUmg_Y2JlCTXWM1ulT883g&s" tvg-id="NBA" group-title="NBA", NBA EVENTOS 2 --> NEW ERA
@@ -543,10 +545,14 @@ http://mediaflow:8888/proxy/acestream/stream?id=108aebe20efc826e56f3a1cb01117a12
 http://mediaflow:8888/proxy/acestream/stream?id=96537527b2d5e858b2e6c863a00dec304254091d&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 01 ** --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=53962d7fb865aff73b34a3afb2905cd492f60d75&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 01 SDp * --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=8faa686a99697b99261346e479ead172b1d9d5d2&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 01 SDp ** --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=23bee556c002d0726c1f0cac98a1901cff0a9239&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 02 ** --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=22b702984a0db43fd371c30e2df150b2336551cd&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 02 SDp * --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=d7e6b6bb1666740a21099fe6ceb0178a14f58e0c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 03 SDp * --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=119087e842ea8857124b9405b10bb6cfffd2900c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", CALCIO EVENTOS FHD --> NEW ERA
