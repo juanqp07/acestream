@@ -62,6 +62,10 @@ http://mediaflow:8888/proxy/acestream/stream?id=f4d9011721fad5098febbe4d7c078a58
 http://mediaflow:8888/proxy/acestream/stream?id=2a5d90651e212106434edea5bfbba1a843b7b97c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Deportes 4" tvg-logo="https://i.ibb.co/WDN9NN9/deportes4.png" group-title="MOVISTAR DEPORTES",M+ Deportes 4 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=4abe06c5cce7cb3c6bef2c3bccaafefd3299794f&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://www.businessempresarial.com.pe/wp-content/uploads/2021/04/gol.jpg" group-title="DEPORTES",Gol Peru *
+http://mediaflow:8888/proxy/acestream/stream?id=e5cb8a4284eadd0f8c5905cc7b5a899da7101312&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://cdn.futbolperuano.com/sdi/2024/06/07/l1-max-transmitira-los-partidos-del-brasileirao-de-manera-gratuita-1241931-0.jpgyXRPcnOXV9d6M" group-title="DEPORTES",Liga 1 Max *
+http://mediaflow:8888/proxy/acestream/stream?id=ddca8f4457d66761c1695285959d096e9727accc&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="Teledeporte" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 720p **
 http://mediaflow:8888/proxy/acestream/stream?id=b0d1489c9f3239349665ad5ab423363f2b02e5ae&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="Teledeporte" tvg-logo="https://img2.rtve.es/n/15966755" group-title="DEPORTES",Teledeporte 1080p **
