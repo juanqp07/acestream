@@ -58,9 +58,9 @@ http://mediaflow:8888/proxy/acestream/stream?id=fb2dd566824658eeab27aae19a01c094
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=01ce89b571b6c89bc19ccaafc913d483ac65c61d&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=d60b8c154828cb990b7bb1570764b215bd979e74&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=13a16a0630ae87bd97d6ba4165963c201c9a2e9c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=d60b8c154828cb990b7bb1570764b215bd979e74&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 --> NEW LOOP
 http://mediaflow:8888/proxy/acestream/stream?id=c93a0d4914713db942fbb210bac467b0224c63a6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Kz0GXSX/dazn2.png" tvg-id="DAZN 2 HD" group-title="DAZN", DAZN 2 --> SPORT TV
@@ -701,6 +701,8 @@ http://mediaflow:8888/proxy/acestream/stream?id=e9975d38aaa4475ac0b1fa0faa541bba
 http://mediaflow:8888/proxy/acestream/stream?id=8499569a8a8977d6dfea59cd83e78d594ae8b06f&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", SuperTennis HD --> NEW LOOP
 http://mediaflow:8888/proxy/acestream/stream?id=7a57543cb6061648dc44c5d4321bd100bc8a47ca&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", TV5Monde Europe ** --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=132c96f09c26b6792fdf19751816788a1747c5f4&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", VIASAT SPORT HD (RU) --> SPORT TV
 http://mediaflow:8888/proxy/acestream/stream?id=dec96c86080c26ddf667ea90adfb513a40007a0b&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Бокс ТВ (RU) --> SPORT TV
