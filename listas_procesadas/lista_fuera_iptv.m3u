@@ -42,9 +42,9 @@ http://mediaflow:8888/proxy/acestream/stream?id=a116ce3ff95c41c60e987e2b1aa24700
 #EXTINF:-1 tvg-logo="https://i.ibb.co/FVzKq1y/dazn1.png" tvg-id="DAZN 1 HD" group-title="DAZN", DAZN 1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=dddff67edfa7061f643ec5ae0be110169850363d&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/FVzKq1y/dazn1.png" tvg-id="DAZN 1 HD" group-title="DAZN", DAZN 1 --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=7ba1f321f4d0791b7ebd42f41a07c1cd1479e784&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://i.ibb.co/FVzKq1y/dazn1.png" tvg-id="DAZN 1 HD" group-title="DAZN", DAZN 1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=9afc89481b721ce6c326c85e47148676077b8e62&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/FVzKq1y/dazn1.png" tvg-id="DAZN 1 HD" group-title="DAZN", DAZN 1 --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=7ba1f321f4d0791b7ebd42f41a07c1cd1479e784&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/FVzKq1y/dazn1.png" tvg-id="DAZN 1 HD" group-title="DAZN", DAZN 1 --> NEW LOOP
 http://mediaflow:8888/proxy/acestream/stream?id=0560234787945a17522e284c4c22bb4df29f33b0&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/FVzKq1y/dazn1.png" tvg-id="DAZN 1 HD" group-title="DAZN", DAZN 1 --> SPORT TV
@@ -158,19 +158,23 @@ http://mediaflow:8888/proxy/acestream/stream?id=724f9b252b11064e3f16220717fd52bd
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=27d11bbeb3026231d52de16b1fac48da7a099247&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=ed6188dcbb491efeb2092c1a6199226c27f61727&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=88d7cdd80be237ae21314f7f1b6582991498e8ba&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=895d08633bb22c2573281655cf3ca44de476cc73&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+http://mediaflow:8888/proxy/acestream/stream?id=ed6188dcbb491efeb2092c1a6199226c27f61727&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=ec54923a1ce7c156923dd10ad68bdb82b8c14841&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=d719181097d256073844390b3e094fbcb1bceaa4&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=b08e158ea3f5c72084f5ff8e3c30ca2e4d1ff6d1&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+http://mediaflow:8888/proxy/acestream/stream?id=910f1f9603271e7a42b133597acd56b0582f3299&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=895d08633bb22c2573281655cf3ca44de476cc73&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=bcf9dc38f92e90a71b87bd54b3bac91b76d09a69&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=fd53cfa7055fe458d4f5c0ff59a06cd43723be55&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=bcf9dc38f92e90a71b87bd54b3bac91b76d09a69&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+http://mediaflow:8888/proxy/acestream/stream?id=b08e158ea3f5c72084f5ff8e3c30ca2e4d1ff6d1&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 --> SPORT TV
 http://mediaflow:8888/proxy/acestream/stream?id=b04372b9543d763bd2dbd2a1842d9723fd080076&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="https://i.ibb.co/2Ndmtbp/f1.png" tvg-id="DAZN F1 HD" group-title="FORMULA 1", DAZN F1 HD --> SPORT TV
@@ -652,9 +656,9 @@ http://mediaflow:8888/proxy/acestream/stream?id=8941762ddb41ff774d02431b7973f759
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/davidmuma/picons_dobleM/master/icon/Tennis%20Channel.png" tvg-id="Tennis Channel" group-title="TENNIS", TENNIS CHANNEL HD --> NEW LOOP
 http://mediaflow:8888/proxy/acestream/stream?id=1b348443efc7f0cf4cdf349ac35bbe5d41be6220&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 01 ** --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=0995b9b77ac6198dd92141369707fb99da09bdb2&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 01 ** --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=53962d7fb865aff73b34a3afb2905cd492f60d75&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 01 ** --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=0995b9b77ac6198dd92141369707fb99da09bdb2&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 01 SDp * --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=8faa686a99697b99261346e479ead172b1d9d5d2&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", ACB EVENTO 01 SDp ** --> ELCANO
@@ -684,17 +688,19 @@ http://mediaflow:8888/proxy/acestream/stream?id=ef341794651e00b7fcc5b5da8570ea37
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Dazn MotoGP FHDp * --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=20d4b3586bb822c3618cf8fb665a304869c5e1a5&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Dazn MotoGP FHDp ** --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=342ca6975a4884d81f9fec5c4085a47060bd2028&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Dazn MotoGP FHDp ** --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=c53bdb3be55d12c5188d25085f1bb16911c15cea&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Dazn MotoGP FHDp ** --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=342ca6975a4884d81f9fec5c4085a47060bd2028&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Dazn MotoGP SDp ** --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=129c707eb4854171d178a566f36d90b7f2b5e624&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport 1 FHDp * --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=ec54923a1ce7c156923dd10ad68bdb82b8c14841&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport 2 FHDp * --> ELCANO
-http://mediaflow:8888/proxy/acestream/stream?id=910f1f9603271e7a42b133597acd56b0582f3299&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport 1 FHDp ** --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=1b25b195b1b84d4b96830410657718e9e275ad49&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport 2 FHDp ** --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=0d780c1fb5fdf2121d9544f1a6892cb1053dd061&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport+ FHDp * --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=b159aee4a9cca5a2d48350cf6894259ecb44c90c&api_password=f8dd309e393f310da37188e5374cbd01163e1940
+#EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Direct Sport+ FHDp ** --> ELCANO
+http://mediaflow:8888/proxy/acestream/stream?id=abfb5236dee14625fe1b19ee27f3a89fb6767dcb&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Esport3 FHDp ** --> ELCANO
 http://mediaflow:8888/proxy/acestream/stream?id=8f59ce96e4c902ba2f5193af07546d7ff17fc3bc&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-logo="" tvg-id="" group-title="OTROS", Esport3 SDp ** --> ELCANO
