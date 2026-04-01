@@ -54,8 +54,6 @@ http://mediaflow:8888/proxy/acestream/stream?id=c6a824a81b36f6c3529826477caf2ad9
 http://mediaflow:8888/proxy/acestream/stream?id=ebca4a63ce3bfda7b272964a1acc5227218184a4&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Golf HD" tvg-logo="https://www.vhv.rs/dpng/d/424-4244985_file-movistar-golf-svg-logo-movistar-golf-hd.png" group-title="MOVISTAR DEPORTES",M+ Golf 720p *
 http://mediaflow:8888/proxy/acestream/stream?id=f60535a458b3c114283e2f433379144345beddd6&api_password=f8dd309e393f310da37188e5374cbd01163e1940
-#EXTINF:-1 tvg-id="M+ Vamos HD" tvg-logo="https://i.ibb.co/gWMRpFB/vamos.png" group-title="MOVISTAR DEPORTES",M+ Vamos 720p **
-http://mediaflow:8888/proxy/acestream/stream?id=0e5d8c9724fa9163f49096b70484e315251eb785&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Vamos HD" tvg-logo="https://i.ibb.co/gWMRpFB/vamos.png" group-title="MOVISTAR DEPORTES",M+ Vamos 1080p *
 http://mediaflow:8888/proxy/acestream/stream?id=ad5ca6e24f87f47a9c3c5bc10c7e8e5af46767fc&api_password=f8dd309e393f310da37188e5374cbd01163e1940
 #EXTINF:-1 tvg-id="M+ Vamos 2" tvg-logo="https://i.ibb.co/gWMRpFB/vamos.png" group-title="MOVISTAR DEPORTES",M+ VAMOS 2 720p *
