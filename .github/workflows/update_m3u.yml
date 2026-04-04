@@ -21,7 +21,7 @@ env:
     https://bit.ly/peticiones1RFEF
     https://ipfs.io/ipns/k51qzi5uqu5di462t7j4vu4akwfhvtjhy88qbupktvoacqfqe9uforjvhyi4wr/hashes.m3u
   OUT_DIR: "listas_procesadas"
-  MODE: ${{ vars.MODE }}
+  MODE: ${{ vars.MODE || 'acexy' }}
 
 jobs:
   update:
